@@ -71,7 +71,6 @@ try {
 }
 
 export async function deleteInvoice(id: string) {
-  throw new Error("Function not implemented.");
   await sql`DELETE FROM invoices WHERE id = ${id}`;
   revalidatePath("/dashboard/invoices");
 }
